@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <headerText header="About this project" message="bla bla bla bla bla">
+    <headerText header="About this project" message="bla bla bla bla">
     </headerText>
     <router-link to="/#">Home</router-link>
   </div>

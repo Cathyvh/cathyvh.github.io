@@ -1,0 +1,51 @@
+$body-bg:black;
+
+// Bootstrap body foreground
+$body-color: white;
+
+
+// Bootstrap theme colors
+$theme-colors: ('primary': #FCA311,
+    'secondary': #14213D,
+    'light-secondary':#294278);
+
+
+// Sass imports (The variables need to be set prior to importing)
+@import '~bootstrap';
+@import '~bootstrap-vue';
+
+// Unset default Vue CLI foreground color set in App.vue, to prevent override of
+// the color set in $body-color
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #0000;
+
+    background-image: url("background.svg"), linear-gradient(180deg, rgba(0, 0, 0, 1) 22%, rgba(2, 3, 5, 1) 37%, rgba(20, 33, 61, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    #app {
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .button {
+            height: 3em;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+    }
+}

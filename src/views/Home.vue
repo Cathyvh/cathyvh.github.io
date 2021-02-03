@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <headerText
+      header="Check out the asteroids that almost killed us"
+      message="Pick a day and see what flew by our planet"
+    >
+    </headerText>
+    <router-link to="/about">About</router-link>
+    <fetchNeos />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import fetchNeos from "@/components/fetchNeos.vue";
+import headerText from "@/components/headerText.vue";
 export default {
-  name: 'Home',
+  name: "home",
   components: {
-    HelloWorld
-  }
-}
+    fetchNeos,
+    headerText,
+  },
+};
 </script>

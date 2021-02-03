@@ -14,26 +14,69 @@ $theme-colors: ('primary': #FCA311,
 @import '~bootstrap';
 @import '~bootstrap-vue';
 
-// Unset default Vue CLI foreground color set in App.vue, to prevent override of
-// the color set in $body-color
+
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+    position: relative;
+    min-height: 100%;
+    margin: 0 0 0px;
     background: #0000;
-
+    padding: 25px;
     background-image: url("background.svg"), linear-gradient(180deg, rgba(0, 0, 0, 1) 22%, rgba(2, 3, 5, 1) 37%, rgba(20, 33, 61, 1) 100%);
 
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Roboto',
+        sans-serif;
 
 
     #app {
 
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: white;
+        min-height: 100%;
+
+
+
+        .about-content {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+
+            img {
+                align-self: flex-start;
+                max-width: 250px;
+            }
+
+            .about-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 70%;
+                justify-content: flex-start;
+
+                p {
+                    margin-left: 40px;
+                    font-size: 20px;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+
         h1 {
-            font-size: 48px;
-            font-weight: bold;
+            font-family: "Teko", sans-serif;
+            font-size: 50px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
         }
 
         h3 {
@@ -45,6 +88,15 @@ body {
             font-size: 24px;
             font-weight: bold;
         }
+
+        p {
+            font-size: 18px;
+            max-width: 70%;
+            text-align: left;
+        }
+
+        footer {}
+
 
 
     }

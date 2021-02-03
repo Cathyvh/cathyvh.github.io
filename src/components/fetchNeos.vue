@@ -23,17 +23,17 @@
         >
           <img
             v-if="neo.estimated_diameter.meters.estimated_diameter_min > 100"
-            src="../img/happy-big.png"
+            src="../assets/happy-big.png"
             alt=""
           />
           <img
             v-else-if="
               neo.estimated_diameter.meters.estimated_diameter_min < 25
             "
-            src="../img/happy-small.png"
+            src="../assets/happy-small.png"
             alt=""
           />
-          <img v-else src="../img/happy-medium.png" alt="" />
+          <img v-else src="../assets/happy-medium.png" alt="" />
           <b-card-text class="card-text">
             <ul>
               <li>

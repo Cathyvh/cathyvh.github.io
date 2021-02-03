@@ -7,25 +7,3 @@
     </footer>
   </div>
 </template>
-
-<style>
-html,
-body {
-  margin: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: white;
-  min-height: 100%;
-  margin-bottom: -20px;
-}
-a.router-link-exact-active {
-  color: blue;
-}
-footer {
-  margin-top: 20px;
-}
-</style>

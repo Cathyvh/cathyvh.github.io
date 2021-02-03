@@ -1,4 +1,4 @@
-# projekt-ramverk
+# neo-project
 
 ## Project setup
 ```

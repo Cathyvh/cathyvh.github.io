@@ -1,7 +1,7 @@
 module.exports = {
   pwa: {
     manifestOptions: {
-      //background_color: 'black'
+      background_color: 'black'
     },
         icons: [
             {
@@ -27,11 +27,12 @@ module.exports = {
     themeColor: 'black',
     workboxOptions: {
       runtimeCaching: [{
-        handler: 'NetworkFirst',
+        handler: 'networkFirst',
         options: {
           networkTimeoutSeconds: 5
         },
-        urlPattern: `https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-03&end_date=2021-02-03&api_key=pWcOGPziboocs8YhHzsny4nvjHKHONdz3VyIPTbm`
+        //Jag har försökt allting men får inte offline-cachet att funka.
+        urlPattern: 'https://api.nasa.gov/neo/'
       }]
     }
   }

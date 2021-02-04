@@ -5,13 +5,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    startDate: "2021-02-01"
+    startDate: ""
   },
   mutations: {
     setStartDate(state, startDate) {
       state.startDate = startDate;
-    }
+    },
+
   },
+  
   actions: {},
   modules: {}
 });

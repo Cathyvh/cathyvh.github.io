@@ -5,7 +5,7 @@
       message="Pick a date and see what flew by our planet"
     >
     </headerText>
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About this project</router-link>
     <fetchNeos />
   </div>
 </template>

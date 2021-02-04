@@ -5,11 +5,14 @@
     <div class="about-content">
       <p>
         This project is made by me, Cathy, for a school project using Vue.js. I
-        used an API with data from the NASA JPL Asteroid team. Please, keep in
-        mind that I have 0 knowledge about space, so some of the information
-        might be presented in a incorrect way. <br />
-        How size was determined on illustrations:
+        used an API with data from the
+        <a href="http://neo.jpl.nasa.gov/">NASA JPL Asteroid team</a>. <br />
+        Please, keep in mind that I have 0 knowledge about space, so some of the
+        information might be presented in a incorrect way. <br />
+        <br />
+        <span>How size was determined on illustrations:</span>
       </p>
+
       <div class="about-box">
         <img src="../assets/happy-small.png" alt="" />
         <p>

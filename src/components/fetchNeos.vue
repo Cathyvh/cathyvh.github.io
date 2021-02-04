@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="fetch-neos">
-      <img :src="happyBig" alt="" />
       <div class="cal-search">
         <b-calendar
           selected-variant="primary"
@@ -12,7 +11,9 @@
         <b-button class="button" @click="loadNeo">Search</b-button>
       </div>
     </div>
-
+    <!-- <div v-if="(this.startDate = undefined)">
+      <b-alert show variant="warning">Choose a date</b-alert>
+    </div> -->
     <div class="results">
       <b-row class="b-row">
         <b-card
@@ -96,7 +97,6 @@ export default {
   data() {
     return {
       neos: [],
-      happyBig: "../happy-big.png",
     };
   },
   methods: {
@@ -109,22 +109,17 @@ export default {
           console.log(this.neos);
         });
     },
-    // currentDateTime() {
-    //   const current = new Date();
-    //   const date =
-    //     current.getFullYear() +
-    //     "-" +
-    //     (current.getMonth() + 1) +
-    //     "-" +
-    //     current.getDate();
-    //   return date;
+    // currentDate() {
+    //   var formattedDate = new Date().toJSON().slice(0, 10);
+    //   console.log(formattedDate);
+    //   return formattedDate;
     // },
   },
+
   computed: {
     url() {
       return `https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.startDate}&end_date=${this.startDate}&api_key=pWcOGPziboocs8YhHzsny4nvjHKHONdz3VyIPTbm`;
     },
-
     startDate: {
       get() {
         return this.$store.state.startDate;

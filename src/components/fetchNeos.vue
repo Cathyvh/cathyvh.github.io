@@ -9,7 +9,7 @@
           locale="en-US"
         ></b-calendar>
         <a
-          href="#div-id"
+          href="#scroll"
           v-smooth-scroll
           class="btn-secondary button"
           @click="loadNeo"
@@ -20,7 +20,7 @@
     <!-- <div v-if="(this.startDate = undefined)">
       <b-alert show variant="warning">Choose a date</b-alert>
     </div> -->
-    <div class="results" id="div-id">
+    <div class="results" id="scroll">
       <div class="card-container">
         <b-card
           class="cards"

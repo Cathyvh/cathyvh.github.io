@@ -7,7 +7,12 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
 import "./main.scss";
 import './registerServiceWorker'
-
+import VueSmoothScroll from 'vue2-smooth-scroll'
+ 
+Vue.use(VueSmoothScroll, {
+  duration: 600,
+  updateHistory: false,
+})
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 

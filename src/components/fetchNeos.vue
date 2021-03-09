@@ -8,16 +8,22 @@
           v-model="startDate"
           locale="en-US"
         ></b-calendar>
-        <b-button class="button" @click="loadNeo">Search</b-button>
+        <a
+          href="#div-id"
+          v-smooth-scroll
+          class="btn-secondary button"
+          @click="loadNeo"
+          >Search</a
+        >
       </div>
     </div>
     <!-- <div v-if="(this.startDate = undefined)">
       <b-alert show variant="warning">Choose a date</b-alert>
     </div> -->
-    <div class="results">
-      <b-row class="b-row">
+    <div class="results" id="div-id">
+      <div class="card-container">
         <b-card
-          class="card"
+          class="cards"
           style="background-color: rgba(20, 33, 61, 0.75)"
           :key="neo.id"
           v-for="neo in neos"
@@ -82,7 +88,7 @@
             </ul>
           </b-card-text>
         </b-card>
-      </b-row>
+      </div>
     </div>
   </div>
 </template>
@@ -133,10 +139,18 @@ export default {
 </script>
 <style scoped>
 .results {
+  margin: 50px auto 250px auto;
+  max-width: 1300px;
+}
+.card-container {
   display: grid;
   justify-items: center;
-  margin-bottom: 250px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2.5rem;
+}
+.card-container > * {
+  width: 100%;
+  max-width: 25rem;
 }
 .fetch-neos {
   display: flex;
@@ -150,20 +164,6 @@ export default {
 }
 .button {
   margin-top: 2em;
-}
-.container {
-  display: grid;
-}
-.b-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: auto;
-  gap: 70px 100px;
-}
-.card {
-  width: 25em;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -182,5 +182,17 @@ li {
 h5,
 span {
   font-weight: bold;
+}
+@media (max-width: 400px) {
+  img {
+    width: 15em;
+  }
+  li {
+  }
+  .card-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
 }
 </style>
